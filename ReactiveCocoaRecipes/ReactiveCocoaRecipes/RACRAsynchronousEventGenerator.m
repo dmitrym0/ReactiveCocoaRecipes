@@ -9,7 +9,7 @@
 #import "RACRAsynchronousEventGenerator.h"
 @interface RACRAsynchronousEventGenerator ( )
 @property (assign, nonatomic) NSUInteger numberOfEventsToGenerate;
-@property (assign, nonatomic) NSIndexPath delay;
+@property (assign, nonatomic) NSTimeInterval delay;
 @property (strong, nonatomic) NSTimer* timer;
 @property (assign, nonatomic) NSUInteger internalValue; // the value we'll return
 @end
@@ -27,11 +27,12 @@
     if (self) {
         _numberOfEventsToGenerate = numberOfEventsToGenerate;
         _delay = delay;
-        _timer = [NSTimer timerWithTimeInterval:_delay
-                                         target:self
-                                       selector:@selector(timerFired)
-                                       userInfo:nil
-                                        repeats:YES];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:_delay
+                                                  target:self
+                                                selector:@selector(timerFired)
+                                                userInfo:nil
+                                                 repeats:YES];
+        
     }
     return self;
     
@@ -42,29 +43,17 @@
     self.numberOfEventsToGenerate--;
     self.internalValue++;
     
-    NSString* value = [NSString stringWithFormat:@"%d", self.internalValue];
+    NSString* value = [NSString stringWithFormat:@"%ld", self.internalValue];
     
     if (self.numberOfEventsToGenerate == 0)
     {
         [self.timer invalidate];
-        [self completedWithValue:value];
+        if (self.completed)
+            self.completed(value);
     } else {
-        [self eventOccuredWithValue:value]
+        if (self.next)
+            self.next(value);
     }
 }
 
--(void) eventOccuredWithValue:(id) value
-{
-    
-}
-
--(void) errorOccuredWithValue:(NSError*) error
-{
-    
-}
-
--(void) completedWithValue:(id) value
-{
-    
-}
 @end

@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-// this guy is a simple event generator with intermediate steps.
+// this guy is a simple event generator.
+//
+//
 @interface RACRAsynchronousEventGenerator : NSObject
+@property (nonatomic, copy) void (^next)(id value);
+@property (nonatomic, copy) void (^error)(NSError *error);
+@property (nonatomic, copy) void (^completed)(id value);
+
+
 -(id) initWithNumberOfEventsToGenerate:(NSUInteger) numberOfEventsToGenerate andDelayBetweenEvents:(NSTimeInterval) delay;
--(void) eventOccuredWithValue:(id) value;
--(void) errorOccuredWithValue:(NSError*) error;
--(void) completedWithValue:(id) value;
 @end

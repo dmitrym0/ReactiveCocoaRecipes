@@ -7,15 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RACRAsyncEventGeneratorDemo.h"
+#import "RACRScenarioRunner.h"
+
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
+        NSLog(@"Starting main.m...");
         
-        // insert code here...
-        NSLog(@"Hello, World!");
+        RACRScenarioRunner* delegate = [[RACRScenarioRunner alloc] init];
+        NSApplication * application = [NSApplication sharedApplication];
+        [application setDelegate:delegate];
+        [NSApp run];
         
+        NSLog(@"main.m done.");
     }
     return 0;
 }

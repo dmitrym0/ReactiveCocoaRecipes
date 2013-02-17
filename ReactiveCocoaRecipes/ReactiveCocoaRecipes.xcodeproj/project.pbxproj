@@ -10,9 +10,12 @@
 		09B29A0C16D17FFF00A29A11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B29A0B16D17FFF00A29A11 /* Foundation.framework */; };
 		09B29A0F16D17FFF00A29A11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B29A0E16D17FFF00A29A11 /* main.m */; };
 		09B29A1316D17FFF00A29A11 /* ReactiveCocoaRecipes.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B29A1216D17FFF00A29A11 /* ReactiveCocoaRecipes.1 */; };
-		09B29A3A16D1803400A29A11 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B29A2B16D1801600A29A11 /* ReactiveCocoa.framework */; };
 		09B29A3E16D1835700A29A11 /* RACRSynchronizeTwoAsyncOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B29A3D16D1835700A29A11 /* RACRSynchronizeTwoAsyncOperations.m */; };
 		09B29A4216D1839F00A29A11 /* RACRAsynchronousEventGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B29A4116D1839F00A29A11 /* RACRAsynchronousEventGenerator.m */; };
+		09B29A4516D1896000A29A11 /* RACRAsyncEventGeneratorDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B29A4416D1896000A29A11 /* RACRAsyncEventGeneratorDemo.m */; };
+		09B29A4616D18AC700A29A11 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B29A2B16D1801600A29A11 /* ReactiveCocoa.framework */; };
+		09B29A4C16D18DC600A29A11 /* RACRScenarioRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B29A4B16D18DC600A29A11 /* RACRScenarioRunner.m */; };
+		09B29A4E16D18E2400A29A11 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B29A4D16D18E2400A29A11 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		09B29A4716D18AF900A29A11 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +82,11 @@
 		09B29A3D16D1835700A29A11 /* RACRSynchronizeTwoAsyncOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACRSynchronizeTwoAsyncOperations.m; sourceTree = "<group>"; };
 		09B29A4016D1839F00A29A11 /* RACRAsynchronousEventGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACRAsynchronousEventGenerator.h; sourceTree = "<group>"; };
 		09B29A4116D1839F00A29A11 /* RACRAsynchronousEventGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACRAsynchronousEventGenerator.m; sourceTree = "<group>"; };
+		09B29A4316D1896000A29A11 /* RACRAsyncEventGeneratorDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACRAsyncEventGeneratorDemo.h; sourceTree = "<group>"; };
+		09B29A4416D1896000A29A11 /* RACRAsyncEventGeneratorDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACRAsyncEventGeneratorDemo.m; sourceTree = "<group>"; };
+		09B29A4A16D18DC600A29A11 /* RACRScenarioRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACRScenarioRunner.h; sourceTree = "<group>"; };
+		09B29A4B16D18DC600A29A11 /* RACRScenarioRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACRScenarioRunner.m; sourceTree = "<group>"; };
+		09B29A4D16D18E2400A29A11 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09B29A3A16D1803400A29A11 /* ReactiveCocoa.framework in Frameworks */,
+				09B29A4E16D18E2400A29A11 /* AppKit.framework in Frameworks */,
+				09B29A4616D18AC700A29A11 /* ReactiveCocoa.framework in Frameworks */,
 				09B29A0C16D17FFF00A29A11 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +106,7 @@
 		09B299FC16D17FFF00A29A11 = {
 			isa = PBXGroup;
 			children = (
+				09B29A4D16D18E2400A29A11 /* AppKit.framework */,
 				09B29A1916D1801600A29A11 /* ReactiveCocoa.xcodeproj */,
 				09B29A0D16D17FFF00A29A11 /* ReactiveCocoaRecipes */,
 				09B29A0A16D17FFF00A29A11 /* Frameworks */,
@@ -119,6 +138,8 @@
 				09B29A0E16D17FFF00A29A11 /* main.m */,
 				09B29A1216D17FFF00A29A11 /* ReactiveCocoaRecipes.1 */,
 				09B29A1016D17FFF00A29A11 /* Supporting Files */,
+				09B29A4A16D18DC600A29A11 /* RACRScenarioRunner.h */,
+				09B29A4B16D18DC600A29A11 /* RACRScenarioRunner.m */,
 			);
 			path = ReactiveCocoaRecipes;
 			sourceTree = "<group>";
@@ -146,6 +167,8 @@
 			children = (
 				09B29A3C16D1835700A29A11 /* RACRSynchronizeTwoAsyncOperations.h */,
 				09B29A3D16D1835700A29A11 /* RACRSynchronizeTwoAsyncOperations.m */,
+				09B29A4316D1896000A29A11 /* RACRAsyncEventGeneratorDemo.h */,
+				09B29A4416D1896000A29A11 /* RACRAsyncEventGeneratorDemo.m */,
 			);
 			name = Scenarios;
 			sourceTree = "<group>";
@@ -169,6 +192,7 @@
 				09B29A0316D17FFF00A29A11 /* Sources */,
 				09B29A0416D17FFF00A29A11 /* Frameworks */,
 				09B29A0516D17FFF00A29A11 /* CopyFiles */,
+				09B29A4716D18AF900A29A11 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -244,6 +268,8 @@
 				09B29A0F16D17FFF00A29A11 /* main.m in Sources */,
 				09B29A3E16D1835700A29A11 /* RACRSynchronizeTwoAsyncOperations.m in Sources */,
 				09B29A4216D1839F00A29A11 /* RACRAsynchronousEventGenerator.m in Sources */,
+				09B29A4516D1896000A29A11 /* RACRAsyncEventGeneratorDemo.m in Sources */,
+				09B29A4C16D18DC600A29A11 /* RACRScenarioRunner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
