@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ReactiveCocoaRecipes' target in the 'ReactiveCocoaRecipes' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
