@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface RACRSynchronizeTwoAsyncOperations : NSObject
-
+-(void) run;
 @end

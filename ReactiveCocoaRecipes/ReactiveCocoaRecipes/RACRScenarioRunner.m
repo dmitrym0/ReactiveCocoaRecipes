@@ -8,12 +8,15 @@
 
 #import "RACRScenarioRunner.h"
 #import "RACRAsyncEventGeneratorDemo.h"
+#import "RACRSynchronizeTwoAsyncOperations.h"
 
 @implementation RACRScenarioRunner
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [[[RACRAsyncEventGeneratorDemo alloc] init] run];
+    //[[[RACRAsyncEventGeneratorDemo alloc] init] run];
+    
+    [[[RACRSynchronizeTwoAsyncOperations alloc] init] run];
     
     //[[NSApplication sharedApplication] terminate:self];
 }

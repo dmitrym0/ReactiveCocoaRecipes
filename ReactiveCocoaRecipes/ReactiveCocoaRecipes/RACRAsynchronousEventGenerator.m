@@ -32,6 +32,7 @@
                                                 selector:@selector(timerFired)
                                                 userInfo:nil
                                                  repeats:YES];
+        DLog(@"Created an event generator that will generate %ld events, ever %f seconds.", _numberOfEventsToGenerate, _delay);
         
     }
     return self;
