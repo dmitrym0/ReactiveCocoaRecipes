@@ -12,10 +12,11 @@
 //
 //
 @interface RACRAsynchronousEventGenerator : NSObject
+// this block gets called when the generator generates an event
 @property (nonatomic, copy) void (^next)(id value);
-@property (nonatomic, copy) void (^error)(NSError *error);
+// this block gets called when the generator completes
 @property (nonatomic, copy) void (^completed)(id value);
-
+@property (nonatomic, copy) void (^error)(NSError *error);
 
 -(id) initWithNumberOfEventsToGenerate:(NSUInteger) numberOfEventsToGenerate andDelayBetweenEvents:(NSTimeInterval) delay;
 @end

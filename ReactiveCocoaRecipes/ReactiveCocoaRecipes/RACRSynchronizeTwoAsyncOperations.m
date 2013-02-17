@@ -13,8 +13,8 @@
 -(void) run
 {
     
-    RACSubject* generator1Subject = [RACReplaySubject subject];
-    RACSubject* generator2Subject = [RACReplaySubject subject];
+    RACReplaySubject* generator1Subject = [RACReplaySubject subject];
+    RACReplaySubject* generator2Subject = [RACReplaySubject subject];
     
     RACRAsynchronousEventGenerator* generator1 = [[RACRAsynchronousEventGenerator alloc] initWithNumberOfEventsToGenerate:5
                                                                                                     andDelayBetweenEvents:0.5];
